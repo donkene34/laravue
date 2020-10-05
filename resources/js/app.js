@@ -10,9 +10,12 @@ window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
+Vue.component('pagination', require('laravel-vue-pagination'));
+Vue.component('add-task',require('./components/AddTaskComponent').default);
 
 import Home from './components/HomeComponent.vue'
 import Task from './components/TaskComponent.vue'
+import Test from './components/TestComponent.vue'
 
 const routes = [
     {
@@ -22,6 +25,10 @@ const routes = [
     {
         path: '/tasks',
         component:Task
+    },
+    {
+        path: '/test',
+        component:Test
     }
 ];
 
@@ -49,4 +56,5 @@ const router = new VueRouter({routes});
 
 const app = new Vue({
     el: '#app',
+    router: router
 });
