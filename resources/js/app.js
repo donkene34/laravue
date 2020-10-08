@@ -12,6 +12,8 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 Vue.component('pagination', require('laravel-vue-pagination'));
 Vue.component('add-task',require('./components/AddTaskComponent').default);
+Vue.component('edit-task',require('./components/EditTaskComponent').default);
+
 
 import Home from './components/HomeComponent.vue'
 import Task from './components/TaskComponent.vue'
